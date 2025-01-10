@@ -519,7 +519,7 @@ GameObject:
   - component: {fileID: 1773290317}
   - component: {fileID: 1773290316}
   m_Layer: 0
-  m_Name: Bordered_Black_Square-400x400_0
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

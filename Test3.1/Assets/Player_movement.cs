@@ -9,12 +9,11 @@ public class Player_movement : MonoBehaviour
     public bool nojump = true;
     public bool Player_Alive = true;
     public PLC Logic;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        Logic = rb.GetComponent<PLC>();
+        Logic = GameObject.FindGameObjectWithTag("PLC").GetComponent<PLC>();
         
     }
     
@@ -22,9 +21,12 @@ public class Player_movement : MonoBehaviour
     void Update()
     {
         Move = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector2(Speed * Move, rb.velocity.y);
+        if (Player_Alive)
+        {
+            rb.velocity = new Vector2(Speed * Move, rb.velocity.y);
+        }
         //Vector2 moveDirection = new Vector2(Speed * Move, rb.velocity.y);
-        if (nojump == false && Input.GetButtonDown("Jump"))
+        if (Player_Alive && nojump == false && Input.GetButtonDown("Jump"))
         {
             rb.AddForce(new Vector2(rb.velocity.x, Jump_Power)); 
         } 
@@ -43,9 +45,16 @@ public class Player_movement : MonoBehaviour
             nojump = true;
         }
     }
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Game_over();
+        Logic.test++;
+        Logic.Game_over();
+        Player_Alive = false;
+        if (collision.gameObject.layer == 3)
+        {
+            Logic.Game_over();
+            Player_Alive = false;
+        }
     }
 }
   

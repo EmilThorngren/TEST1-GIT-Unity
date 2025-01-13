@@ -8,12 +8,14 @@ public class Player_movement : MonoBehaviour
     private Rigidbody2D rb;
     public bool nojump = true;
     public bool Player_Alive = true;
-    public PLC PLC;
+    public PLC Logic;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        PLC = GameObject.FindGameObjectsWithTag("PLC").GetComponent<PLC>();
+        Logic = rb.GetComponent<PLC>();
+        
     }
     
     [Obsolete]
@@ -41,10 +43,9 @@ public class Player_movement : MonoBehaviour
             nojump = true;
         }
     }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
-
+        Game_over();
     }
 }
   

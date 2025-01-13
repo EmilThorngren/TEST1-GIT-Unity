@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 218110339}
   - component: {fileID: 218110338}
   m_Layer: 0
-  m_Name: PLC
+  m_Name: Logic_Manager
   m_TagString: PLC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 748b1c60382ea8547abfa2b5b5a15752, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Game_overScreen: {fileID: 1010297553}
 --- !u!4 &218110339
 Transform:
   m_ObjectHideFlags: 0
@@ -178,7 +179,7 @@ GameObject:
   - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -490,7 +491,7 @@ GameObject:
   - component: {fileID: 719245598}
   m_Layer: 0
   m_Name: Kill Void
-  m_TagString: Void
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -568,6 +569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4136593d4bef1584a88a090177609225, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player_died: 0
 --- !u!1 &734454118
 GameObject:
   m_ObjectHideFlags: 0
@@ -1156,6 +1158,7 @@ MonoBehaviour:
   Jump_Power: 400
   nojump: 1
   Player_Alive: 1
+  Logic: {fileID: 218110338}
 --- !u!50 &1773290317
 Rigidbody2D:
   serializedVersion: 5

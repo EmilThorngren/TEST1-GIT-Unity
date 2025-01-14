@@ -365,7 +365,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5528ec80eed0e6f45a7cd665557521b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1773290315}
+  target: {fileID: 1773290320}
+  Smooth_Time: 0.25
+  velocity: {x: 0, y: 0, z: 0}
+  offset: {x: 0, y: 0, z: -10}
 --- !u!1 &543617642
 GameObject:
   m_ObjectHideFlags: 0
@@ -1188,7 +1191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b57c949d1c881d4c9f1e4cf7277c6ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Movespeed: 20
+  Movespeed: 15
 --- !u!4 &1529659810
 Transform:
   m_ObjectHideFlags: 0
@@ -1238,7 +1241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 5
-  Jump_Power: 1500
+  Jump_Power: 1000
   nojump: 0
   Player_Alive: 1
   Logic: {fileID: 0}

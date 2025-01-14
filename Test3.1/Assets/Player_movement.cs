@@ -9,6 +9,8 @@ public class Player_movement : MonoBehaviour
     public bool nojump = true;
     public bool Player_Alive = true;
     public PLC Logic;
+    public float Delay_Time = 0.1f;
+    public float Timer = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -42,7 +44,12 @@ public class Player_movement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Grounded"))
         {
+            while(Timer < Delay_Time)
+            {
+                Timer += Time.deltaTime;
+            }
             nojump = true;
+            Timer = 0;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -50,11 +57,6 @@ public class Player_movement : MonoBehaviour
         Logic.test++;
         Logic.Game_over();
         Player_Alive = false;
-        if (collision.gameObject.layer == 3)
-        {
-            Logic.Game_over();
-            Player_Alive = false;
-        }
     }
 }
   

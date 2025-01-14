@@ -15,5 +15,4 @@ public class PLC : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-
 }

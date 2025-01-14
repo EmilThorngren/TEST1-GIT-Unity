@@ -44,12 +44,7 @@ public class Player_movement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Grounded"))
         {
-            while(Timer < Delay_Time)
-            {
-                Timer += Time.deltaTime;
-            }
             nojump = true;
-            Timer = 0;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

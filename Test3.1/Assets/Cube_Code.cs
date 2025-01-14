@@ -13,6 +13,6 @@ public class Cube_Code : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += (Vector3.down * Movespeed) * Time.deltaTime;
+        transform.position += (Vector3.up * Movespeed) * Time.deltaTime;
     }
 }

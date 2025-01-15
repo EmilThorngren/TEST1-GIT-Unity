@@ -8,6 +8,8 @@ TagManager:
   - Void
   - PLC
   - Cam
+  - BigJump
+  - Special Jump
   layers:
   - Default
   - TransparentFX

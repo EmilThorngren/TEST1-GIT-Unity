@@ -9,8 +9,7 @@ public class Player_movement : MonoBehaviour
     public bool nojump = true;
     public bool Player_Alive = true;
     public PLC Logic;
-    public float Delay_Time = 0.1f;
-    public float Timer = 0;
+    public float Extra_Jump = 2;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -33,11 +32,16 @@ public class Player_movement : MonoBehaviour
             rb.AddForce(new Vector2(rb.velocity.x, Jump_Power)); 
         } 
    }
+    [Obsolete]
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Grounded"))
         {
             nojump = false;     
+        }
+        if (other.gameObject.CompareTag("BigJump"))
+        {
+            rb.AddForce(new Vector2(rb.velocity.x, (Extra_Jump * Jump_Power)));
         }
     }
     private void OnCollisionExit2D(Collision2D other)

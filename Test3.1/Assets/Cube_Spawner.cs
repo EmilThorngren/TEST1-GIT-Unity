@@ -7,6 +7,8 @@ public class Cube_Spawner : MonoBehaviour
 {
     public GameObject Cube_1_2;
     public GameObject Cube_3_4;
+    public GameObject Cube_5;
+    public GameObject Cube_6;
     public float Spawnrate = 2;
     public float Timer = 0;
     public float YaxisRange = 1;
@@ -35,6 +37,8 @@ public class Cube_Spawner : MonoBehaviour
         float XHighestpoint = transform.position.x + YaxisRange;
         Instantiate(Cube_1_2, new Vector3(Random.Range(XLowestpoint, XHighestpoint), Random.Range(YLowestpoint, YHighestpoint), 0), transform.rotation);
         Instantiate(Cube_3_4, new Vector3(Random.Range(XLowestpoint, XHighestpoint), Random.Range(YLowestpoint, YHighestpoint), 0), transform.rotation);
+        Instantiate(Cube_5, new Vector3(Random.Range(XLowestpoint, XHighestpoint), Random.Range(YLowestpoint, YHighestpoint), 0), transform.rotation);
+        Instantiate(Cube_6, new Vector3(Random.Range(XLowestpoint, XHighestpoint), Random.Range(YLowestpoint, YHighestpoint), 0), transform.rotation);
     }
 }
 

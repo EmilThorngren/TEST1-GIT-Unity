@@ -197,11 +197,10 @@ MonoBehaviour:
   Cube_1_2: {fileID: 8183988195958112980, guid: 802ac9ee787b55043a946cd4ab9b8786, type: 3}
   Cube_3_4: {fileID: 2307258659271584693, guid: e654ca40954acd745a602d4c86c55ee2, type: 3}
   Cube_5: {fileID: 4441699673156811873, guid: e9d30d40d15599d49829a0f60cff8eb2, type: 3}
-  Cube_6: {fileID: 3108515325210468692, guid: dd4197ee42cf1b1468de1da0a83856d0, type: 3}
   Spawnrate: 1.5
   Timer: 0
   YaxisRange: 10
-  XaxisRange: 5
+  XaxisRange: 10
 --- !u!4 &366555574
 Transform:
   m_ObjectHideFlags: 0
@@ -544,6 +543,7 @@ GameObject:
   m_Component:
   - component: {fileID: 719245597}
   - component: {fileID: 719245596}
+  - component: {fileID: 719245598}
   m_Layer: 0
   m_Name: Kill Void
   m_TagString: Void
@@ -612,6 +612,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &719245598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719245595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4136593d4bef1584a88a090177609225, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Movespeed: 2
+  Set_Start_Time: 5
+  Timer: 0
+  acceleration: 1.5
 --- !u!1 &734454118
 GameObject:
   m_ObjectHideFlags: 0
@@ -1449,7 +1465,7 @@ MonoBehaviour:
   Spawnrate: 10
   Timer: 0
   YaxisRange: 20
-  XaxisRange: 10
+  XaxisRange: 15
 --- !u!1 &1773290315
 GameObject:
   m_ObjectHideFlags: 0

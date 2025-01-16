@@ -9,9 +9,11 @@ public class PLC : MonoBehaviour
     {
         test++;
         Game_overScreen.SetActive(true);
+        Time.timeScale = 0;
     }
     public void Game_restart()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

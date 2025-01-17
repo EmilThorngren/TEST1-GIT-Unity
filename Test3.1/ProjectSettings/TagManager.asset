@@ -10,6 +10,7 @@ TagManager:
   - Cam
   - BigJump
   - Special Jump
+  - Blue_Coin
   layers:
   - Default
   - TransparentFX

@@ -10,14 +10,13 @@ public class Player_movement : MonoBehaviour
     public bool Player_Alive = true;
     public PLC Logic;
     public float Extra_Jump = 2;
+    public bool Coin_die = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         Logic = GameObject.FindGameObjectWithTag("PLC").GetComponent<PLC>();
-        
     }
-    
     [Obsolete]
     void Update()
     {
@@ -53,9 +52,18 @@ public class Player_movement : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Logic.test++;
-        Logic.Game_over();
-        Player_Alive = false;
+        if (collision.gameObject.CompareTag("Void"))
+        {
+            Logic.test++;
+            Logic.Game_over();
+            Debug.Log("Player dead");
+            Player_Alive = false;
+        }
+        if ( collision.gameObject.CompareTag("Blue_Coin"))
+        {
+            Jump_Power += 100;
+            Coin_die =true;
+        }
     }
 }
   

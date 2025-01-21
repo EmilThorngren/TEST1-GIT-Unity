@@ -8,13 +8,12 @@ public class Special_Cube_Spawner : MonoBehaviour
     public float Timer = 0;
     public float YaxisRange = 20;
     public float XaxisRange = 10;
-    public GameObject Target; 
-    public Player_movement player_Movement;
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        player_Movement = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_movement>(); 
+         
     }
 
     // Update is called once per frame
@@ -29,10 +28,7 @@ public class Special_Cube_Spawner : MonoBehaviour
             Spawn_Special();
             Timer = 0;
         }
-        if (transform.position.y < Target.transform.position.y)
-        {
-            Destroy(gameObject);
-        }
+    
     }
     public void Spawn_Special()
     {

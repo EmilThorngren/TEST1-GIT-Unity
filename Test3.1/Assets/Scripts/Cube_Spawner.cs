@@ -20,7 +20,7 @@ public class Cube_Spawner : MonoBehaviour
     {
         if (Timer < Spawnrate)
         {
-            Timer = Timer + Time.deltaTime;
+            Timer += Time.deltaTime;
         }
         else
         {

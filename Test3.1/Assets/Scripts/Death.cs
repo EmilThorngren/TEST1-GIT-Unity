@@ -21,6 +21,7 @@ public class Death : MonoBehaviour
     void Raising_vector()
     {
         transform.position += (Vector3.up * Movespeed * acceleration) * Time.deltaTime;
+        acceleration += 0.001f;
     }
 
 

@@ -779,7 +779,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 130, y: 0.5}
+  m_Size: {x: 225, y: 0.5}
   m_EdgeRadius: 0
 --- !u!4 &719245597
 Transform:
@@ -809,7 +809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4136593d4bef1584a88a090177609225, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Movespeed: 0
+  Movespeed: 1.5
   acceleration: 1.1
 --- !u!1 &734454118
 GameObject:
@@ -1888,10 +1888,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Special_Jump_Cube: {fileID: 5239775573132327184, guid: 1551950533851e1419b19ad519476e93, type: 3}
   Blue_Coin_Cube: {fileID: 3400780139719151368, guid: 81ea1832b766fce4c91b11ab0df2b95e, type: 3}
-  Spawnrate: 12
+  Spawnrate: 1
   Timer: 0
   YaxisRange: 30
   XaxisRange: 10
+  Target: {fileID: 719245595}
+  player_Movement: {fileID: 0}
 --- !u!1 &1773290315
 GameObject:
   m_ObjectHideFlags: 0
@@ -2068,7 +2070,7 @@ Transform:
   m_GameObject: {fileID: 1773290315}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1000, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
